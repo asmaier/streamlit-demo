@@ -50,6 +50,8 @@ st.pyplot(sns.pairplot(data=f[["Close","Volume"]], markers="+", kind="reg", diag
 f = web.DataReader('^DJI', 'stooq')
 dow = f[["Close"]]
 
-new_data = dax.merge(dow, left_index=True, right_index=True, suffixes=('_dax', '_dow'))
+daxdow = dax.merge(dow, left_index=True, right_index=True, suffixes=('_dax', '_dow'))
 
-st.pyplot(sns.pairplot(data=new_data, markers="+", kind="reg", diag_kind="kde"))
+st.pyplot(sns.pairplot(data=daxdow, markers="+", kind="reg", diag_kind="kde"))
+
+
