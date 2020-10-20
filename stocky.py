@@ -1,3 +1,7 @@
+# App to compute correlation between two stock symbols.
+# Inspired by
+# https://algotrading101.com/learn/python-correlation-guide/
+
 import streamlit as st
 import pandas as pd
 import pandas_datareader.data as web
@@ -25,9 +29,10 @@ with col2:
 df = pd.merge(df_first.pct_change(), df_second.pct_change(), left_index=True, right_index=True)
 df = df.rename(columns={first + "_x": first, second + "_y": second})
 
-days = len(df.index)
-df_corr = pd.DataFrame()
+st.header("Daily change (%)")
+st.line_chart(df)
 
+days = len(df.index)
 correlations = []
 while days > 0:
     df_temp = df.head(days)
@@ -39,14 +44,26 @@ while days > 0:
 
 df_corr = pd.DataFrame(correlations, columns=["days", "correlation"])
 df_corr = df_corr.set_index("days")
-df_corr = df_corr.head(n=-5)
 
-
-st.header("Daily change (%)")
-st.line_chart(df)
-
-# df_corr
 st.header("Correlation in the last X days")
-st.line_chart(df_corr)
+st.line_chart(df_corr.head(n=-5))
+
+correlations = []
+while days < len(df.index):
+    correlation = df[first].corr(df[second].shift(-days))
+
+    # st.write(correlation)
+
+    correlations.append((days, correlation))
+
+    days = days + 1
+
+df_corr = pd.DataFrame(correlations, columns=["days", "correlation"])
+df_corr = df_corr.set_index("days")
+# df_corr = df_corr.head(n=-5)
+
+st.header("Correlation second symbol X days behind first symbol")
+st.line_chart(df_corr.head(n=100))
+
 
 
