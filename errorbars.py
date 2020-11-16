@@ -19,7 +19,7 @@ Especially these question are less trivial than most people including
 scientists think: "If two error bars 
 overlap, does that mean the difference in the results is not 
 significant?" and "If two error bars don't overlap, does that mean 
- the results the difference is significant?"
+the difference in the results is significant?"
  
 The answer to both question is: "It depends." It depends on many things.
 First and foremost there a three scores which are commonly used to
