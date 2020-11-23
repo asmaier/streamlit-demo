@@ -5,6 +5,9 @@ import io
 
 f = web.DataReader('^DAX', 'stooq')
 
+# IDE says: "Statement seems to have no effect"
+# But in fact this generates a table view of the dataframe
+# in streamlit
 f
 
 dax = f[["Close"]]
@@ -28,7 +31,7 @@ st.line_chart(dax)
 
 # How to work with pandas inbuilt plotting.
 # It needs optional pandas dependency matplotlib
-# One has to select thr property ".figure" from the pandas
+# One has to select the property ".figure" from the pandas
 # output
 st.pyplot(dax.plot().figure)
 
@@ -44,7 +47,7 @@ sns.set_theme()
 st.pyplot(sns.relplot(data=dax, kind="line"))
 
 
-st.pyplot(sns.pairplot(data=f[["Close","Volume"]], markers="+", kind="reg", diag_kind="kde"))
+st.pyplot(sns.pairplot(data=f[["Close", "Volume"]], markers="+", kind="reg", diag_kind="kde"))
 
 # dow
 f = web.DataReader('^DJI', 'stooq')
