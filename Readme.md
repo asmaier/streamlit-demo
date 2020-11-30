@@ -1,4 +1,4 @@
-# Streamlit Demos
+# Streamlit Demos [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/asmaier/streamlit-demo/main/errorbars.py)
 
 This is a repository holding some demo code 
 for the https://www.streamlit.io/ framework. 
