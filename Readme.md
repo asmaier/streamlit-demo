@@ -1,4 +1,4 @@
-# Streamlit Demos [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/asmaier/streamlit-demo/main/errorbars.py)
+# Streamlit Demos [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://asmaier-streamlit-demo-errorbars-ndntyu.streamlitapp.com/)
 
 This is a repository holding some demo code 
 for the https://www.streamlit.io/ framework. 
@@ -17,7 +17,7 @@ from https://stooq.com/ .
 
 To access the app navigate to
 
-https://share.streamlit.io/asmaier/streamlit-demo/main/stocky.py
+https://asmaier-streamlit-demo-stocky-99iqsj.streamlitapp.com/
 
 ## 2. Understanding error bars
 
@@ -27,7 +27,7 @@ of the meaning of error bars.
 
 To access the app navigate to
 
-https://share.streamlit.io/asmaier/streamlit-demo/main/errorbars.py
+https://asmaier-streamlit-demo-errorbars-ndntyu.streamlitapp.com/
 
 
 # Development Notes 
