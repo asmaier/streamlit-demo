@@ -94,7 +94,7 @@ err2 = ax.errorbar(x, y2, yerr=yerr2, fmt='o', capsize=5, transform=trans2)
 
 st.pyplot(fig)
 
-with st.beta_expander("Answers"):
+with st.expander("Answers"):
     st.subheader("Answer 1")
     st.table({"error bar": ["std", "sem", "ci95"], "p-value": [0.0003, 0.17, 0.005]})
     st.subheader("Answer 2")

@@ -11,6 +11,7 @@ pandas = "*"
 pandas-datareader = "*"
 matplotlib = "*"
 seaborn = "*"
+jupyterlab = "*"
 
 [requires]
 python_version = "3.8"

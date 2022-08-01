@@ -23,7 +23,7 @@ df_second = get_data_from_stooq(second)[["Close"]]
 df_first = df_first.rename(columns={"Close": first})
 df_second = df_second.rename(columns={"Close": second})
 
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 with col1:
     st.line_chart(df_first)

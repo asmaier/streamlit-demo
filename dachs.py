@@ -12,7 +12,7 @@ f
 
 dax = f[["Close"]]
 
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 with col1:
     # it is not yet possible to center the content
