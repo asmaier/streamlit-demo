@@ -17,7 +17,7 @@ from https://stooq.com/ .
 
 To access the app navigate to
 
-https://asmaier-streamlit-demo-stocky-e8ty0w.streamlitapp.com/
+https://asmaier-streamlit-demo-stocky-e8ty0w.streamlit.app/
 
 ## 2. Understanding error bars
 
@@ -27,8 +27,17 @@ of the meaning of error bars.
 
 To access the app navigate to
 
-https://asmaier-streamlit-demo-errorbars-pxypmq.streamlitapp.com/
+https://errorbars.streamlit.app/
 
+## 3. The blue marble
+
+This is an app showing images from earth 
+taken by the [Deep Space Climate Observatory](https://en.wikipedia.org/wiki/Deep_Space_Climate_Observatory)
+positioned at the Lagrange point L1 in a distance of 1,475,207 km
+from earth. It makes use of the [EPIC API](https://epic.gsfc.nasa.gov/about/api).
+
+But in opposition to the NASA app this streamlit demo shows the latest
+image closest to a given lat/lon-position.
 
 
 # Development Notes 

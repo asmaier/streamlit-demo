@@ -11,7 +11,8 @@ import numpy as np
 
 st.set_page_config(
     page_title="The blue marble",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed",
 )
 
 st.markdown("""
@@ -85,6 +86,18 @@ with center:
 with st.sidebar: 
     lat = st.slider("latitude", -90.0,90.0,value=52.531677)
     lon = st.slider("longitude", -180.0,180.0,value=13.381777)
+
+    st.markdown("""
+
+    ### About
+    This is an app showing images from earth 
+    taken by the [Deep Space Climate Observatory](https://en.wikipedia.org/wiki/Deep_Space_Climate_Observatory)
+    positioned at the Lagrange point L1 in a distance of 1,475,207 km
+    from earth. It makes use of the [EPIC API](https://epic.gsfc.nasa.gov/about/api).
+    
+    But in opposition to the NASA app this streamlit demo shows the latest
+    image closest to a given lat/lon-position.
+    """)
 
 idxmin = df_images.apply(lambda x: distance(lat,lon,x.lat,x.lon), axis=1).idxmin()
 image = df_images.iloc[idxmin]
