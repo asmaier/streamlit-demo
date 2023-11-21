@@ -39,6 +39,10 @@ from earth. It makes use of the [EPIC API](https://epic.gsfc.nasa.gov/about/api)
 But in opposition to the NASA app this streamlit demo shows the latest
 image closest to a given lat/lon-position.
 
+To access the app navigate to
+
+https://blue-marble.streamlit.app/
+
 
 # Development Notes 
 To generate the `requirements.txt` file from 

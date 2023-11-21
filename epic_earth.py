@@ -4,10 +4,6 @@ import pandas as pd
 import requests
 from PIL import Image
 import numpy as np
-# from streamlit_profiler import Profiler
-
-# p = Profiler()
-# p.start()
 
 st.set_page_config(
     page_title="The blue marble",
@@ -28,18 +24,6 @@ st.markdown("""
 
 st.title("The blue marble")
 
-
-# def distance(lat1,lon1,lat2,lon2):
-#     dlon = radians(lon2) - radians(lon1)
-#     dlat = radians(lat2) - radians(lat1)
-    
-#     a = sin(dlat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2)**2
-#     c = 2 * atan2(sqrt(a), sqrt(1 - a))
-#     R = 6373.0
-    
-#     distance_haversine_formula = R * c
-#     return distance_haversine_formula
-
 def distance(lat1,lon1,lat2,lon2):
     R = 6371.0088
     lat1,lon1,lat2,lon2 = map(np.radians, [lat1,lon1,lat2,lon2])
@@ -49,24 +33,6 @@ def distance(lat1,lon1,lat2,lon2):
     a = np.sin(dlat/2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2) **2
     c = 2 * np.arctan2(a**0.5, (1-a)**0.5)
     return R * c
-
-# @st.cache_data
-# def get_metadata():
-#     images = []
-#     resp = requests.get("https://epic.gsfc.nasa.gov/api/natural/all")
-#     for entry in resp.json()[:]:
-#         date = entry["date"]
-#         url = "https://epic.gsfc.nasa.gov/api/natural/date/" + date
-#         metadata = requests.get(url)
-#         for data in metadata.json():
-#             name = data["image"]
-#             coordinates = data["centroid_coordinates"]
-#         # print(name, coordinates)
-#             images.append({"name": name, "lat": coordinates["lat"], "lon": coordinates["lon"], "date": date})
-#     return images        
-
-# images = get_metadata()
-# df_images = pd.DataFrame(images)
 
 @st.cache_data
 def get_metadata():
@@ -108,12 +74,6 @@ if url:
     placeholder.image(url, image["date"])
     st.session_state["url"] = url
 
-# st.write(image)
-
-# resp = requests.get(url)
-# image = Image.open(resp.content)
-
-# p.stop()
 
 
 
