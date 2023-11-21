@@ -13,6 +13,8 @@ matplotlib = "*"
 seaborn = "*"
 jupyterlab = "*"
 scipy = "*"
+Pillow = "*"
+streamlit-profiler = "*"
 
 [requires]
 python_version = "3.9"
