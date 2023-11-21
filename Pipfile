@@ -15,6 +15,7 @@ jupyterlab = "*"
 scipy = "*"
 Pillow = "*"
 streamlit-profiler = "*"
+importlib-resources = "*"
 
 [requires]
 python_version = "3.9"
