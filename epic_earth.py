@@ -62,6 +62,11 @@ with st.sidebar:
     
     But in opposition to the NASA app this streamlit demo shows the latest
     image closest to a given lat/lon-position.
+
+    ----
+    Follow me on
+    - https://astromaier.medium.com
+    - https://github.com/asmaier
     """)
 
 idxmin = df_images.apply(lambda x: distance(lat,lon,x.lat,x.lon), axis=1).idxmin()

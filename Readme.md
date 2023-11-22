@@ -44,9 +44,3 @@ To access the app navigate to
 https://blue-marble.streamlit.app/
 
 
-# Development Notes 
-To generate the `requirements.txt` file from 
-the `Pipfile` do the following:
-
-    pipenv lock --requirements > requirements.txt
-
