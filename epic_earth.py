@@ -15,10 +15,9 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand');
 
-    html body *{
-        font-family: 'Quicksand', sans-serif; 
-        background-color: black;
-    }
+    *{
+         font-family: 'Quicksand', sans-serif;
+     }
 </style>
 """, unsafe_allow_html=True)
 
@@ -71,6 +70,7 @@ image = df_images.iloc[idxmin]
 url = "https://epic.gsfc.nasa.gov/archive/natural/" + image["date"].replace("-", "/") + "/jpg/" + image["name"] + ".jpg"
 
 if url:
+    # placeholder.image(url)
     placeholder.image(url, image["date"])
     st.session_state["url"] = url
 
