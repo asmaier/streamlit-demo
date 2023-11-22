@@ -15,9 +15,14 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand');
 
-    *{
+    * {
          font-family: 'Quicksand', sans-serif;
      }
+
+    .appview-container .main .block-container {
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+                    }
 </style>
 """, unsafe_allow_html=True)
 
